@@ -1,3 +1,8 @@
+---
+title: Modkit Loader
+description: Runtime Module Loader
+---
+
 # Modkit Loader
 
 <!-- TODO Badges -->
@@ -24,7 +29,7 @@ const Modkit = require('modkit-loader');
 
 ``` typescript
 // ES6 or TypeScript
-import * as Modkit from 'modkit-loader';
+import Modkit from 'modkit-loader';
 ```
 
 ### With CDN

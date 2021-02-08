@@ -1,0 +1,9 @@
+{
+  "name": "system",
+  "endpoint": "./dist/system.js",
+  "format": {
+    "type": "system"
+  },
+  "version": "0.0.1",
+  "dependencies": []
+}

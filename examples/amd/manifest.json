@@ -1,0 +1,9 @@
+{
+  "name": "amd",
+  "endpoint": "./dist/amd.js",
+  "format": {
+    "type": "amd"
+  },
+  "version": "0.0.1",
+  "dependencies": []
+}

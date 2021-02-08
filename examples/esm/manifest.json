@@ -1,0 +1,9 @@
+{
+  "name": "esm",
+  "endpoint": "./dist/esm.js",
+  "format": {
+    "type": "esm"
+  },
+  "version": "0.0.1",
+  "dependencies": []
+}

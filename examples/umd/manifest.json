@@ -1,0 +1,10 @@
+{
+  "name": "umd",
+  "endpoint": "./dist/umd.js",
+  "format": {
+    "type": "umd",
+    "name": "UMD"
+  },
+  "version": "0.0.1",
+  "dependencies": []
+}
