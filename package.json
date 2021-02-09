@@ -35,6 +35,15 @@
     "code-splitting"
   ],
   "scripts": {
+    "install:all": "run-s install:lib install:docs install:modules",
+    "install:lib": "npm i",
+    "install:docs": "cd docs && npm i",
+    "install:modules": "run-s install:modules:iife install:modules:amd install:modules:umd install:modules:esm install:modules:system",
+    "install:modules:iife": "cd examples/iife && npm i",
+    "install:modules:amd": "cd examples/amd && npm i",
+    "install:modules:umd": "cd examples/umd && npm i",
+    "install:modules:esm": "cd examples/esm && npm i",
+    "install:modules:system": "cd examples/system && npm i",
     "dev": "npm run build:lib && run-p dev:lib dev:docs dev:modules",
     "dev:lib": "run-p dev:lib:tsc dev:lib:rollup",
     "dev:lib:tsc": "tsc --watch --module commonjs",

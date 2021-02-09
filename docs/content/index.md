@@ -29,7 +29,7 @@ const Modkit = require('modkit-loader');
 
 ``` typescript
 // ES6 or TypeScript
-import Modkit from 'modkit-loader';
+import * as Modkit from 'modkit-loader';
 ```
 
 ### With CDN
