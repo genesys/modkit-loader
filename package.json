@@ -35,8 +35,7 @@
     "code-splitting"
   ],
   "scripts": {
-    "install:all": "run-s install:lib install:docs install:modules",
-    "install:lib": "npm i",
+    "install:all": "npm i && run-s install:docs install:modules",
     "install:docs": "cd docs && npm i",
     "install:modules": "run-s install:modules:iife install:modules:amd install:modules:umd install:modules:esm install:modules:system",
     "install:modules:iife": "cd examples/iife && npm i",
