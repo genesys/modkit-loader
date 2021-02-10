@@ -12,6 +12,7 @@ It exports a `load()`, and an `unload()` function, that will just create an aler
 
 ### Directly from Github
 
+<!-- TODO: replace link by github pages when available -->
 The module can be used directly from github with this url: [https://github.com/genesys/modkit-loader/tree/master/examples/iife/manifest.json](https://github.com/genesys/modkit-loader/tree/master/examples/iife/manifest.json)
 
 ### If you copied the content
