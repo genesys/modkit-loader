@@ -29,15 +29,25 @@ import * as Modkit from 'modkit-loader';
 
 ### With CDN
 
+As `Modkit Loader` uses **code-splitting**, we cannot bundle the library as a standard **UMD** build.
+With modern browsers, that's not an issue, but when targeting IE11, you'll need something more.
+
 ``` html
-<!-- CDN -->
-<script type="text/javascript" src="https://unpkg.com/modkit-loader"></script>
-<script>
-  const Modkit = window.Modkit;
+<!-- Modern Browsers -->
+<script type="module">
+  import * as Modkit from 'https://unpkg.com/modkit-loader/dist/module/index.js';
+  // Modkit is available
+</script>
+<!-- IE11 (Needs polyfills and systemjs before loading)-->
+<script nomodule src="https://unpkg.com/bluebird/js/browser/bluebird.core.min.js"></script>
+<script nomodule src="https://unpkg.com/whatwg-fetch/dist/fetch.umd.js"></script>
+<script nomodule src="https://unpkg.com/systemjs/dist/s.min.js"></script>
+<script nomodule>
+  System.import('https://unpkg.com/modkit-loader/dist/system/index.js').then(function (Modkit) {
+    // Modkit is available
+  });
 </script>
 ```
-
-<!-- Better explanation about esm and system -->
 
 ## Usage
 
@@ -47,22 +57,19 @@ Once the Modkit Singleton is imported, you can load a module:
 
 ``` javascript
 Modkit.load('/path/to/my-module/manifest.json')
-  .then((_mod) => {
-    // {
-    //  "name": "my-module",
-    //  "version": "0.0.2",
-    //  "format": {
-    //    "type": "umd"
-    //  },
-    //  "mod": MY-EXPORTED-MODULE
-    // }
-    }
+  .then((m) => {
+    // Here, "m" is an object containing all manifest properties along with other computed properties
+    m.mod // This is the module itself
+    m.rootPath // This is the root path to the module build, that is helpful for static assets
   });
 ```
 
 ## Features
 
-<!-- TODO -->
+* Dynamically load packages at runtime, supporting all formats via a single `load` method.
+* Will automatically load what is needed depending on the module format ([require.js](https://requirejs.org/) for amd modules, [system.js](https://github.com/systemjs/systemjs) for system modules).
+* Has module manifest validation (global and on-load)
+* Supports module dependencies (libraries or other modules), with [semver](https://semver.org/) versioning for compatibility.
 
 ## License
 

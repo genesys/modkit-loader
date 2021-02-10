@@ -1,6 +1,6 @@
 {
   "name": "iife",
-  "endpoint": "./dist/iife.js",
+  "endpoint": "./iife.js",
   "format": {
     "type": "iife",
     "name": "IIFE"
