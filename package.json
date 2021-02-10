@@ -37,7 +37,6 @@
     "install:all": "npm i && run-s install:docs install:modules",
     "install:docs": "cd docs && npm i",
     "install:modules": "run-s install:modules:iife install:modules:amd install:modules:umd install:modules:esm install:modules:system",
-    "install:modules:iife": "cd examples/iife && npm i",
     "install:modules:amd": "cd examples/amd && npm i",
     "install:modules:umd": "cd examples/umd && npm i",
     "install:modules:esm": "cd examples/esm && npm i",
