@@ -78,10 +78,6 @@ declare interface ModkitManager {
  */
 declare interface ModkitOptions {
   /**
-   * Whether requests should be made with credentials or not (CORS).
-   */
-  withCredentials: boolean;
-  /**
    * Global validator, that will be called for each module loading.
    */
   validator?: ModkitValidator;

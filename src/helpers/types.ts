@@ -18,7 +18,7 @@ export function instanceOfManifest (manifest: ModkitManifest): manifest is Modki
  * Checks whether the object is a modkit module dependency or not.
  * @param dependency The potential dependency manifest.
  */
-export function instanceOfDependency (dependency: any): dependency is ModkitDependency {
+export function instanceOfDependency (dependency: ModkitDependency): dependency is ModkitDependency {
   return (
     'name' in dependency &&
     'type' in dependency
