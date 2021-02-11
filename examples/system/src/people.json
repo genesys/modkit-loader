@@ -1,0 +1,128 @@
+[
+  {
+    "id": "1",
+    "gender": "men",
+    "firstname": "John",
+    "lastname": "Doe",
+    "picture": "men1.jpg"
+  },
+  {
+    "id": "2",
+    "gender": "men",
+    "firstname": "Jim",
+    "lastname": "Patterson",
+    "picture": "men2.jpg"
+  },
+  {
+    "id": "3",
+    "gender": "men",
+    "firstname": "Hector",
+    "lastname": "Hernandez",
+    "picture": "men3.jpg"
+  },
+  {
+    "id": "4",
+    "gender": "men",
+    "firstname": "Dylan",
+    "lastname": "Ocampos",
+    "picture": "men4.jpg"
+  },
+  {
+    "id": "5",
+    "gender": "men",
+    "firstname": "Brandon",
+    "lastname": "Schwartz",
+    "picture": "men5.jpg"
+  },
+  {
+    "id": "6",
+    "gender": "men",
+    "firstname": "Brahim",
+    "lastname": "Tuker",
+    "picture": "men6.jpg"
+  },
+  {
+    "id": "7",
+    "gender": "men",
+    "firstname": "Juan",
+    "lastname": "Delavega",
+    "picture": "men7.jpg"
+  },
+  {
+    "id": "8",
+    "gender": "men",
+    "firstname": "Jean",
+    "lastname": "Petit",
+    "picture": "men8.jpg"
+  },
+  {
+    "id": "9",
+    "gender": "men",
+    "firstname": "Sylvain",
+    "lastname": "Smith",
+    "picture": "men9.jpg"
+  },
+  {
+    "id": "10",
+    "gender": "women",
+    "firstname": "Sylvie",
+    "lastname": "Lesaint",
+    "picture": "women1.jpg"
+  },
+  {
+    "id": "11",
+    "gender": "women",
+    "firstname": "Julie",
+    "lastname": "Hernandez",
+    "picture": "women2.jpg"
+  },
+  {
+    "id": "12",
+    "gender": "women",
+    "firstname": "Sophie",
+    "lastname": "Ambroise",
+    "picture": "women3.jpg"
+  },
+  {
+    "id": "13",
+    "gender": "women",
+    "firstname": "Julia",
+    "lastname": "Mulligan",
+    "picture": "women4.jpg"
+  },
+  {
+    "id": "14",
+    "gender": "women",
+    "firstname": "Delphine",
+    "lastname": "Reed",
+    "picture": "women5.jpg"
+  },
+  {
+    "id": "15",
+    "gender": "women",
+    "firstname": "Paula",
+    "lastname": "Roberts",
+    "picture": "women6.jpg"
+  },
+  {
+    "id": "16",
+    "gender": "women",
+    "firstname": "Natalia",
+    "lastname": "Silva",
+    "picture": "women7.jpg"
+  },
+  {
+    "id": "17",
+    "gender": "women",
+    "firstname": "Brenda",
+    "lastname": "Smith",
+    "picture": "women8.jpg"
+  },
+  {
+    "id": "18",
+    "gender": "women",
+    "firstname": "Vanessa",
+    "lastname": "Huguens",
+    "picture": "women9.jpg"
+  }
+]

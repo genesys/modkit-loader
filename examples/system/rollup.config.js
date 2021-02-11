@@ -3,6 +3,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import VuePlugin from 'rollup-plugin-vue';
 import copy from 'rollup-plugin-copy';
+import json from 'rollup-plugin-json';
 
 export default () => {
   const dest = '../../docs/static/modules/system';
@@ -19,9 +20,11 @@ export default () => {
       }
     ],
     plugins: [
+      json(),
       copy({
         targets: [
-          { src: 'manifest.json', dest }
+          { src: 'manifest.json', dest },
+          { src: 'src/static', dest: destDist }
         ]
       }),
       resolve({
