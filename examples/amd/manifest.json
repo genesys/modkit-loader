@@ -1,6 +1,6 @@
 {
   "name": "amd",
-  "endpoint": "./dist/amd.js",
+  "endpoint": "./amd.js",
   "format": {
     "type": "amd"
   },

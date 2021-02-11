@@ -7,6 +7,7 @@ import json from 'rollup-plugin-json';
 
 const camelName = 'ModkitLoader';
 const cjsPackage = 'dist/commonjs';
+const amdPackage = 'dist/amd';
 const esmPackage = 'dist/module';
 const sysPackage = 'dist/system';
 const docsPackage = 'docs/plugins/libs/modkit-loader';
@@ -15,6 +16,7 @@ export default {
   input: 'src/index.ts',
   output: [
     { dir: cjsPackage, name: camelName, format: 'cjs', sourcemap: true },
+    { dir: amdPackage, name: camelName, format: 'amd', sourcemap: true },
     { dir: esmPackage, format: 'es', sourcemap: true },
     { dir: sysPackage, format: 'system', sourcemap: true },
     { dir: docsPackage, format: 'es', sourcemap: true }
