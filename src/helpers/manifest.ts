@@ -72,7 +72,7 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
 export async function loadByUrl (this: ModkitManager, manifestPath: string, validator?: ModkitValidator): Promise<ModkitPackage> {
   // Bindings
   const _loadByManifest = loadByManifest.bind(this);
-  const res = await axios.get(manifestPath, this.options);
+  const res = await axios.get(manifestPath);
   if (instanceOfManifest(res.data)) {
     const endpoint = resolveUrl(manifestPath, res.data.endpoint);
     const manifest = {
@@ -90,7 +90,7 @@ export async function loadByUrl (this: ModkitManager, manifestPath: string, vali
  * @param manifest Package manifest.
  * @param validator Custom validation.
  */
-export async function validateManifest (this: ModkitManager, manifest: ModkitManifest, validator?: ModkitValidator) {
+export async function validateManifest (this: ModkitManager, manifest: ModkitManifest, validator?: ModkitValidator): Promise<void> {
   // Bindings
   const _loadLibDependency = loadLibDependency.bind(this);
   const _loadModuleDependency = loadModuleDependency.bind(this);
