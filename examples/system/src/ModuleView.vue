@@ -96,7 +96,6 @@ export default {
   text-align: center;
 }
 .people-img {
-  width: 300px;
-  height: 200px;
+  width: 200px;
 }
 </style>
