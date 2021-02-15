@@ -1,7 +1,7 @@
 import axios from 'axios';
 import resolveUrl from 'resolve-url';
 
-import { ModkitManifest, ModkitValidator, ModkitManager, ModkitIife, ModkitPackage } from '../types/modkit';
+import { ModkitManifest, ModkitManifestParser, ModkitManager, ModkitIife, ModkitPackage } from '../types/modkit';
 import { ModkitModuleFormatType, ModkitDependencyType } from '../types/enum';
 
 import { loadLibDependency, loadModuleDependency } from './dependency';
@@ -18,9 +18,9 @@ const JSON_SPACES = 2;
 /**
  * Loads a module by manifest.
  * @param manifest Module manifest.
- * @param validator Module validator.
+ * @param parseManifest Module parseManifest.
  */
-export async function loadByManifest (this: ModkitManager, manifest: ModkitManifest, validator?: ModkitValidator): Promise<ModkitPackage> {
+export async function loadByManifest (this: ModkitManager, manifest: ModkitManifest, parseManifest?: ModkitManifestParser): Promise<ModkitPackage> {
   // Bindings
   const _validateManifest = validateManifest.bind(this);
   if (instanceOfManifest(manifest)) {
@@ -30,7 +30,7 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
       return _module;
     } else {
       console.info(`[Modkit] ${manifest.name} manifest: ${JSON.stringify(manifest, null, JSON_SPACES)}`);
-      await _validateManifest(manifest, validator);
+      await _validateManifest(manifest, parseManifest);
       let _mod = null;
       switch (manifest.format.type) {
         case ModkitModuleFormatType.Amd:
@@ -67,9 +67,9 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
 /**
  * Loads a module by endpoint url.
  * @param manifestPath Endpoint url.
- * @param validator Module validator.
+ * @param parseManifest Module parseManifest.
  */
-export async function loadByUrl (this: ModkitManager, manifestPath: string, validator?: ModkitValidator): Promise<ModkitPackage> {
+export async function loadByUrl (this: ModkitManager, manifestPath: string, parseManifest?: ModkitManifestParser): Promise<ModkitPackage> {
   // Bindings
   const _loadByManifest = loadByManifest.bind(this);
   const res = await axios.get(manifestPath);
@@ -79,7 +79,7 @@ export async function loadByUrl (this: ModkitManager, manifestPath: string, vali
       ...res.data,
       endpoint
     };
-    return _loadByManifest(manifest, validator);
+    return _loadByManifest(manifest, parseManifest);
   } else {
     throw new Error('The manifest seems to have a bad syntax.');
   }
@@ -88,25 +88,18 @@ export async function loadByUrl (this: ModkitManager, manifestPath: string, vali
 /**
  * Validates a manifest.
  * @param manifest Package manifest.
- * @param validator Custom validation.
+ * @param parseManifest Custom parseManifest.
  */
-export async function validateManifest (this: ModkitManager, manifest: ModkitManifest, validator?: ModkitValidator): Promise<void> {
+export async function validateManifest (this: ModkitManager, manifest: ModkitManifest, parseManifest?: ModkitManifestParser): Promise<void> {
   // Bindings
   const _loadLibDependency = loadLibDependency.bind(this);
   const _loadModuleDependency = loadModuleDependency.bind(this);
-  // Validation
-  const globalValidator = this.options.validator;
-  if (globalValidator && validator) {
-    if (!globalValidator(manifest) || !validator(manifest)) {
-      throw new Error('Module validation has failed.');
-    }
-  } else if (globalValidator) {
-    if (!globalValidator(manifest)) {
-      throw new Error('Module validation has failed.');
-    }
-  } else if (validator) {
-    if (!validator(manifest)) {
-      throw new Error('Module validation has failed.');
+  // Manifest Parser
+  if (parseManifest) {
+    await parseManifest(manifest);
+  } else {
+    if (this.options.parseManifest) {
+      await this.options.parseManifest(manifest);
     }
   }
   // Dependencies

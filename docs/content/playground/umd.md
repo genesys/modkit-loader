@@ -20,7 +20,7 @@ sidebar:
 
 > Use the toolbar `load/unload` button to **load/unload** the module.
 
-This example shows how to handle external dependencies.
+This example shows how to handle library dependencies.
 
 Example location: [https://github.com/genesys/modkit-loader/tree/master/examples/umd](https://github.com/genesys/modkit-loader/tree/master/examples/umd)
 

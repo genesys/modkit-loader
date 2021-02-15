@@ -5,35 +5,40 @@ title: Modkit Loader - In Depth - Advanced Usage
 
 There is plenty other things you can do with `Modkit Loader`, check this out!
 
-## Validation
+## Manifest Parsing
 
-If you want to make a validation before loading your modules, you can pass a function to Modkit returning a `boolean`.
-You have two options:
-
-### Global validation
-
-You can add a validation function that will be called each time Modkit loads a manifest.
+If you want to parse the manifest, in order to modify values, or even reject the loading of a module, you can pass an `async` function to Modkit.
+It should either resolve with the manifest, or resolve empty (it we keep original manifest).
 
 ``` javascript
-Modkit.options.validator = (manifest) => {
-  if (manifest.version !== '1.0.0') {
-    return false;
-  }
-  return true;
+const parseManifest = async (manifest) => {
+  return new Promise((resolve, reject) => {
+    if (manifest.version !== '1.0.0') {
+      // Rewrite manifest properties
+      manifest.name += '-rewritten';
+      resolve();
+    } else {
+      // Do not load the module
+      reject(new Error('The module version is invalid.'));
+    }
+  });
 };
 ```
 
-### Specific validation
+You have two options:
 
-You can also pass a validator to the `load` function:
+### Globally
 
 ``` javascript
-const myModule = await Modkit.load('http://my-server/my-module/manifest.json', (manifest) => {
-  if (manifest.version !== '1.0.0') {
-    return false;
-  }
-  return true;
-});
+Modkit.options.parseManifest = parseManifest;
+```
+
+### On load
+
+You can also pass the parse function as the second parameter of the `load` function:
+
+``` javascript
+await Modkit.load('http://my-server/my-module/manifest.json', parseManifest);
 ```
 
 ## Loading

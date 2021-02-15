@@ -5,5 +5,12 @@
     "type": "esm"
   },
   "version": "0.0.1",
-  "dependencies": []
+  "dependencies": [
+    {
+      "type": "module",
+      "name": "umd-module",
+      "version": "*",
+      "endpoint": "/modules/umd/manifest.json"
+    }
+  ]
 }

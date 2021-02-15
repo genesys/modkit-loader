@@ -4,7 +4,7 @@
       <button v-if="!dayjs" @click="loadDayjs">Load DayJS</button>
       <button v-if="!mod" @click="loadRefManifest">Load #1</button>
       <button v-if="!mod" @click="loadCdnManifest">Load #2</button>
-      <button v-else @click="unload">Unload</button>
+      <button v-if="mod" @click="unload">Unload</button>
     </div>
     <div v-if="log" class="row log" v-html="log"></div>
     <div class="content">

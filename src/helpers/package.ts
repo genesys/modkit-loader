@@ -1,4 +1,4 @@
-import { ModkitManifest, ModkitValidator, ModkitManager, ModkitPackage } from '../types/modkit';
+import { ModkitManifest, ModkitManifestParser, ModkitManager, ModkitPackage } from '../types/modkit';
 
 import { isObject } from '../utils/object';
 import { loadByManifest, loadByUrl } from './manifest';
@@ -6,13 +6,13 @@ import { loadByManifest, loadByUrl } from './manifest';
 /**
  * Loads package by manifest(s), or url(s).
  * @param from The package location. [url(s), or manifest(s)]
- * @param validator Custom validation method.
+ * @param parseManifest Custom parseManifest method.
  */
 export async function loadPackage
   (
     this: ModkitManager,
     from: string|string[]|ModkitManifest|ModkitManifest[],
-    validator?: ModkitValidator
+    parseManifest?: ModkitManifestParser
   ): Promise<ModkitPackage|ModkitPackage[]> {
   // Bindings
   const _loadByManifest = loadByManifest.bind(this);
@@ -21,17 +21,17 @@ export async function loadPackage
     const _mods: ModkitPackage[] = [];
     for (const p of from) {
       if (isObject(p)) {
-        _mods.push(await _loadByManifest(p as ModkitManifest, validator));
+        _mods.push(await _loadByManifest(p as ModkitManifest, parseManifest));
       } else {
-        _mods.push(await _loadByUrl(p as string, validator));
+        _mods.push(await _loadByUrl(p as string, parseManifest));
       }
     }
     return _mods;
   } else {
     if (isObject(from)) {
-      return _loadByManifest(from as ModkitManifest, validator);
+      return _loadByManifest(from as ModkitManifest, parseManifest);
     } else {
-      return _loadByUrl(from as string, validator);
+      return _loadByUrl(from as string, parseManifest);
     }
   }
 }

@@ -13,3 +13,5 @@ export function load ({ Vue, updatedDate }) {
 export function unload () {
   document.getElementById('umd-sample').innerHTML = '';
 }
+
+export const UmdView = ModuleView;

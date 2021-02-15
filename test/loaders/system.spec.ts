@@ -23,7 +23,7 @@ describe('Modkit System Loader', () => {
     it('should load system.js and fail', async () => {
       await expect(load(manifest)).rejects.toThrow('Could not load Module: dummy-error');
     });
-    it('should load system.js and fail', async () => {
+    it('should load system.js and succeed', async () => {
       (window.System.import as jest.Mock).mockResolvedValueOnce('dummy-mod');
       expect(await load(manifest)).toEqual('dummy-mod');
     });

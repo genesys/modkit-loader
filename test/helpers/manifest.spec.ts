@@ -134,21 +134,26 @@ describe('Modkit Manifest Helper', () => {
       expect(mockLoadLibDependency).toHaveBeenCalled();
       expect(mockLoadModuleDependency).toHaveBeenCalled();
     });
-    it('should check validator', async () => {
-      expect(await _validateManifest(manifest, () => true)).toEqual(undefined);
-      await expect(_validateManifest(manifest, () => false)).rejects.toThrow('Module validation has failed.');
+    it('should check onload parseManifest', async () => {
+      expect(await _validateManifest(manifest, async () => { return; })).toEqual(undefined);
+      expect(manifest.name).toEqual('dummy-umd');
+      expect(await _validateManifest(manifest, async () => {
+        manifest.name = 'other-name';
+      })).toEqual(undefined);
+      expect(manifest.name).toEqual('other-name');
+      await expect(_validateManifest(manifest, async () => { throw new Error('Module validation has failed.'); })).rejects.toThrow('Module validation has failed.');
     });
-    it('should check global validator', async () => {
-      Modkit.options.validator = () => true;
+    it('should check global parseManifest', async () => {
+      Modkit.options.parseManifest = async () => { return; };
       expect(await _validateManifest(manifest)).toEqual(undefined);
-      Modkit.options.validator = () => false;
+      expect(manifest.name).toEqual('other-name');
+      Modkit.options.parseManifest = async () => {
+        manifest.name = 'other-name-2';
+      };
+      expect(await _validateManifest(manifest)).toEqual(undefined);
+      expect(manifest.name).toEqual('other-name-2');
+      Modkit.options.parseManifest = async () => { throw new Error('Module validation has failed.'); };
       await expect(_validateManifest(manifest)).rejects.toThrow('Module validation has failed.');
-    });
-    it('should check both validators', async () => {
-      Modkit.options.validator = () => true;
-      expect(await _validateManifest(manifest, () => true)).toEqual(undefined);
-      Modkit.options.validator = () => false;
-      await expect(_validateManifest(manifest, () => false)).rejects.toThrow('Module validation has failed.');
     });
   });
 });

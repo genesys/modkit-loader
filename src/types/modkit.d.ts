@@ -63,9 +63,9 @@ declare interface ModkitManager {
   /**
    * Loads module by manifest(s), or url(s).
    * @param from The module location. [url(s), or manifest(s)]
-   * @param validator Custom validation method.
+   * @param parseManifest Custom parser method.
    */
-  load: (from: string | string[] | ModkitManifest | ModkitManifest[], validator?: ModkitValidator) => Promise<ModkitPackage | ModkitPackage[]>;
+  load: (from: string | string[] | ModkitManifest | ModkitManifest[], parseManifest?: ModkitManifestParser) => Promise<ModkitPackage | ModkitPackage[]>;
   /**
    * Get module by name.
    * @param name Module name.
@@ -78,9 +78,9 @@ declare interface ModkitManager {
  */
 declare interface ModkitOptions {
   /**
-   * Global validator, that will be called for each module loading.
+   * Global parseManifest, that will be called for each module loading.
    */
-  validator?: ModkitValidator;
+  parseManifest?: ModkitManifestParser;
 }
 
 /**
@@ -156,10 +156,10 @@ declare interface ModkitManifest {
 }
 
 /**
- * Module validator.
+ * Module parseManifest.
  * @param manifest The module manifest.
  */
-declare type ModkitValidator = (manifest: ModkitManifest) => boolean;
+declare type ModkitManifestParser = (manifest: ModkitManifest) => Promise<void>;
 
 /**
  * Module dependency.

@@ -1,6 +1,11 @@
 <template>
   <div id="umd-sample">
-    <div class="date">{{ text }}</div>
+    <div class="container">
+      <div class="date">{{ text }}</div>
+      <div class="slot">
+        <slot/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -32,11 +37,19 @@ export default {
 <style lang="scss" scoped>
 div#umd-sample {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
-  > div.date {
-    padding-top: 1em;
-    padding-right: 1em;
-    color: var(--madoc-github-grey-2);
+  > div.container {
+    display: flex;
+    flex-direction: column;
+    > div.date {
+      padding-top: 1em;
+      padding-right: 1em;
+      color: var(--madoc-github-grey-2);
+    }
+    > div.slot {
+
+    }
   }
 }
 </style>
