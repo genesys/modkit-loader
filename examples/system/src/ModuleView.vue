@@ -74,7 +74,7 @@ export default {
         })
         .catch(e => {
           if (e instanceof Mollitia.RatelimitError) {
-            this.ratelimitedMessage = `You are Rate Limited, you will be able to see another image in ${Math.ceil(e.remainingTimeInRatelimit / 1000)}s`;
+            this.ratelimitedMessage = `You are Rate Limited, you will be able to see other random persons in ${Math.ceil(e.remainingTimeInRatelimit / 1000)}s`;
           }
         });
     },
