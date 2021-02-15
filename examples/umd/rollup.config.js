@@ -16,13 +16,20 @@ export default () => {
         dir: destDist,
         format: 'umd',
         name: 'UMD',
-        sourcemap: false
+        sourcemap: false,
+        globals: {
+          dayjs: 'dayjs'
+        }
       }
+    ],
+    external: [
+      'dayjs'
     ],
     plugins: [
       copy({
         targets: [
-          { src: 'manifest.json', dest }
+          { src: 'manifest.ref.json', dest },
+          { src: 'manifest.cdn.json', dest }
         ]
       }),
       resolve({

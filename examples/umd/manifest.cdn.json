@@ -1,0 +1,21 @@
+{
+  "name": "umd",
+  "endpoint": "./dist/umd.js",
+  "format": {
+    "type": "umd",
+    "name": "UMD"
+  },
+  "version": "0.0.1",
+  "dependencies": [
+    {
+      "type": "lib",
+      "name": "dayjs",
+      "endpoint": "https://unpkg.com/dayjs@1.8.21/dayjs.min.js"
+    },
+    {
+      "type": "lib",
+      "name": "dayjs_plugin_calendar",
+      "endpoint": "https://unpkg.com/dayjs@1.8.21/plugin/calendar.js"
+    }
+  ]
+}

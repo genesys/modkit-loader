@@ -1,10 +1,10 @@
 import ModuleView from './ModuleView.vue';
 
-export function load ({ Vue, modulePath }) {
+export function load ({ Vue, updatedDate }) {
   const _ModuleView = Vue.extend(ModuleView);
   new _ModuleView({
     propsData: {
-      modulePath
+      updatedDate
     }
   }).$mount('#umd-sample');
   return;

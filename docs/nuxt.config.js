@@ -24,6 +24,10 @@ export default {
     ]
   },
 
+  env: {
+    updatedDate: new Date()
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
   styleResources: {
