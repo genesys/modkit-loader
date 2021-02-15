@@ -25,9 +25,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-    '@pixel/fonts'
-  ],
+  css: [],
   styleResources: {
     scss: [
       '~/style/variables.scss',
@@ -36,7 +34,6 @@ export default {
   },
 
   plugins: [
-    { src: '~/plugins/pixel.js', mode: 'client' },
     '~/plugins/modkit-loader.js'
   ],
 

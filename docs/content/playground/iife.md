@@ -16,8 +16,29 @@ sidebar:
 ---
 <pg-main name="iife"></pg-main>
 
-<!-- TODO: Starting sample (iife) -->
-<!-- TODO: Sample with static assets -->
-<!-- TODO: Sample with external dependency -->
-<!-- TODO: Sample with internal dependency -->
-<!-- TODO: Sample with validation -->
+# Iife
+
+> Use the toolbar `load/unload` button to **load/unload** the module.
+
+This really simple example will just create an alert when being **loaded/unloaded**.
+
+Example location: [https://github.com/genesys/modkit-loader/tree/master/examples/iife](https://github.com/genesys/modkit-loader/tree/master/examples/iife)
+
+Here is the code that will be loaded in the application:
+
+``` javascript
+var IIFE = (function (exports) {
+  'use strict';
+
+  function load () {
+    window.alert('IIFE module has been loaded.');
+  }
+  function unload () {
+    window.alert('IIFE module has been unloaded.');
+  }
+
+  exports.load = load;
+  exports.unload = unload;
+  return exports;
+}({}));
+```
