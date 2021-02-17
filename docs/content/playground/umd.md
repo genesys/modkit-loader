@@ -1,6 +1,5 @@
 ---
 title: Modkit Loader - Playground - Umd
-size: full
 sidebar:
   links:
     - title: Iife

@@ -1,6 +1,5 @@
 ---
 title: Modkit Loader - Playground - Amd
-size: full
 sidebar:
   links:
     - title: Iife
@@ -51,4 +50,4 @@ define([], function() {
 });
 ```
 
-This extra file is just there to show how to the use define in amd.js file
+This extra file is just there to show how to the use define in amd.js file.

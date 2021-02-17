@@ -12,3 +12,4 @@ Here are some module ideas that could enhance your application:
 * Modify the theme of your application by overloading CSS.
 * Add new views in your application.
 * Add localization capabilities.
+* ...

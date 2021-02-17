@@ -1,6 +1,7 @@
 <template>
   <div class="pg-umd">
     <div class="row">
+      <label>Actions:</label>
       <button v-if="!dayjs" @click="loadDayjs">Load DayJS</button>
       <button v-if="!mod" @click="loadRefManifest">Load #1</button>
       <button v-if="!mod" @click="loadCdnManifest">Load #2</button>
@@ -81,11 +82,20 @@ export default {
 
 <style lang="scss">
 div.pg-umd {
+  margin-top: 2em;
   margin-bottom: 1em;
   > div.row {
     display: flex;
     flex-direction: row;
+    align-items: center;
     border-bottom: 1px solid var(--madoc-grey-5);
+    > label {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    > button:first-of-type {
+      margin-left: auto;
+    }
     &.log {
       padding: 1em 2em;
     }
@@ -101,12 +111,15 @@ button {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, .05);
   border: none;
   padding: 1em 2em;
+  border-top: 1px solid var(--madoc-grey-5);
   border-right: 1px solid var(--madoc-grey-5);
-  border-bottom: 2px solid var(--madoc-light-orange);
   color: var(--madoc-white);
+  &:first-of-type {
+    border-left: 1px solid var(--madoc-grey-5);
+  }
   &:hover, &:focus {
     outline: none;
     background-color: rgba(255, 255, 255, .1);

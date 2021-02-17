@@ -1,6 +1,5 @@
 ---
 title: Modkit Loader - Playground - Esm
-size: full
 sidebar:
   links:
     - title: Iife

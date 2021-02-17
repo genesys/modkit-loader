@@ -1,6 +1,7 @@
 <template>
   <div class="pg-esm">
     <div class="row">
+      <label>Actions:</label>
       <button v-if="!mod" @click="load">Load</button>
       <button v-else @click="unload">Unload</button>
     </div>
@@ -57,11 +58,20 @@ export default {
 
 <style lang="scss">
 div.pg-esm {
+  margin-top: 2em;
   margin-bottom: 1em;
   > div.row {
     display: flex;
     flex-direction: row;
+    align-items: center;
     border-bottom: 1px solid var(--madoc-grey-5);
+    > label {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    > button:first-of-type {
+      margin-left: auto;
+    }
   }
   & ~ * {
     max-width: 60%;
@@ -74,11 +84,15 @@ button {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, .05);
   border: none;
   padding: 1em 2em;
+  border-top: 1px solid var(--madoc-grey-5);
   border-right: 1px solid var(--madoc-grey-5);
-  border-bottom: 2px solid var(--madoc-light-orange);
+  color: var(--madoc-white);
+  &:first-of-type {
+    border-left: 1px solid var(--madoc-grey-5);
+  }
   color: var(--madoc-white);
   &:hover, &:focus {
     outline: none;

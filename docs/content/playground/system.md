@@ -1,6 +1,5 @@
 ---
 title: Modkit Loader - Playground - System
-size: full
 sidebar:
   links:
     - title: Iife
