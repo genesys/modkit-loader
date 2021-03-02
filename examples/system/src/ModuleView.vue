@@ -18,7 +18,7 @@
       </tbody>
     </table>
     <div>
-      <button @click='buttonClicked'>Random persons</button>
+      <button class="random-persons-button" @click='buttonClicked'>Random persons</button>
     </div>
     <div v-if='ratelimitedMessage'> {{ ratelimitedMessage}}</div>
   </div>
@@ -97,5 +97,8 @@ export default {
 }
 .people-img {
   width: 200px;
+}
+.random-persons-button {
+  margin-top: 10px;
 }
 </style>

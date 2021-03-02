@@ -15,6 +15,6 @@ export async function load ({ Vue, modulePath }) {
 
 export async function unload () {
   const mod = await import('./left-message.js');
-  document.getElementById('system-sample').innerHTML = mod.default();
+  document.getElementById('system-sample').innerHTML = `<h3>${mod.default()}</h3>`;
   
 }
