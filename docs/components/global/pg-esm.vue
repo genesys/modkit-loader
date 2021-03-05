@@ -33,10 +33,9 @@ export default {
   },
   methods: {
     load () {
-      this.$modkit.load(`${this.publicPath}/modules/esm/manifest.json`, async (manifest) => {
+      this.$modkit.load(`${this.publicPath}/modules/esm/manifest.json`, (manifest) => {
         // Rewrite dependency endpoint
         manifest.dependencies[0].endpoint = `${this.publicPath}/modules/umd/manifest.cdn.json`;
-        return;
       })
         .then(({ mod }) => {
           this.mod = mod;

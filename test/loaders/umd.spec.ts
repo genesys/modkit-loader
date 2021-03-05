@@ -25,12 +25,12 @@ const manifest = {
 describe('Modkit Umd Loader', () => {
   describe('load()', () => {
     it('should load with iife by default', async () => {
-      await expect(load(manifest));
+      expect(await load(manifest));
       expect(mockLoadIife).toHaveBeenCalled();
     });
     it('should load with amd if app has an amd loader', async () => {
       mockHasRequire.mockReturnValueOnce(true as any);
-      await expect(load(manifest));
+      expect(await load(manifest));
       expect(mockLoadAmd).toHaveBeenCalled();
     });
   });

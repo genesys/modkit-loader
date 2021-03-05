@@ -3,5 +3,6 @@
 /dist
 /node_modules
 /plugins/libs
-/static
+/static/modules
+/static/sw.js
 /.eslintrc.js

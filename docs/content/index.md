@@ -3,7 +3,11 @@ title: Modkit Loader
 description: Runtime Module Loader
 ---
 
-<!-- TODO Badges -->
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=genesys_modkit-loader&metric=alert_status)](https://sonarcloud.io/dashboard?id=genesys_modkit-loader)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=genesys_modkit-loader&metric=coverage)](https://sonarcloud.io/dashboard?id=genesys_modkit-loader)
+[![Version](https://img.shields.io/npm/v/modkit-loader)](https://www.npmjs.com/package/modkit-loader)
+[![Downloads](https://img.shields.io/npm/dt/modkit-loader)](https://www.npmjs.com/package/modkit-loader)
+[![License](https://img.shields.io/npm/l/modkit-loader)](https://github.com/cadgerfeast/modkit-loader/blob/master/LICENSE)
 
 `Modkit Loader` is a customization library that allows you to add modules to your application, at runtime.
 

@@ -35,7 +35,9 @@ describe('Modkit Dependency Helper', () => {
     it('should throw if ref is still undefined', async () => {
       libDependency.name = 'dummy-dependency-2';
       libDependency.version = 'dummy-version';
-      await expect(_loadLibDependency(libDependency)).rejects.toThrow('Library Dependency [dummy-dependency-2@dummy-version] could not be found: Error: Reference is undefined');
+      expect(
+        _loadLibDependency(libDependency)
+      ).rejects.toThrow('Library Dependency [dummy-dependency-2@dummy-version] could not be found: Error: Reference is undefined');
     });
     it('should resolve if ref is defined after loading', async () => {
       libDependency.name = 'dummy-dependency-3';
@@ -83,7 +85,9 @@ describe('Modkit Dependency Helper', () => {
     });
     it('should throw if module is loaded with uncompatible version', async () => {
       modDependency.version = '1.0.0';
-      await expect(_loadModuleDependency(modDependency)).rejects.toThrow('Module Dependency [dummy-dependency] has incompatible version: (needs 1.0.0, has 0.0.1)');
+      expect(
+        _loadModuleDependency(modDependency)
+      ).rejects.toThrow('Module Dependency [dummy-dependency] has incompatible version: (needs 1.0.0, has 0.0.1)');
     });
   });
 });

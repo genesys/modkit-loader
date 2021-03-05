@@ -141,7 +141,11 @@ describe('Modkit Manifest Helper', () => {
         manifest.name = 'other-name';
       })).toEqual(undefined);
       expect(manifest.name).toEqual('other-name');
-      await expect(_validateManifest(manifest, async () => { throw new Error('Module validation has failed.'); })).rejects.toThrow('Module validation has failed.');
+      expect(
+        _validateManifest(
+          manifest,
+          async () => { throw new Error('Module validation has failed.'); }
+        )).rejects.toThrow('Module validation has failed.');
     });
     it('should check global parseManifest', async () => {
       Modkit.options.parseManifest = async () => { return; };
