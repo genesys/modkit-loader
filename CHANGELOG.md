@@ -1,3 +1,33 @@
 # Changelog
 
-## 0.0.1
+## [0.0.2](https://github.com/genesys/modkit-loader/compare/0.0.1...0.0.2)
+
+- bump version 0.0.2 [`2594d8b`](https://github.com/genesys/modkit-loader/commit/2594d8b272924442f5c87b55ab4a03ecf0fd5024)
+
+## 0.0.1 (2021-03-05)
+
+- first draft [`0e0116f`](https://github.com/genesys/modkit-loader/commit/0e0116f10f49dcc1956eb8dbaed91472275b57d4)
+- Add AMD example [`8c536a0`](https://github.com/genesys/modkit-loader/commit/8c536a00458c0c4be687d9f2fdaf889f5d58aefd)
+- refactor iife example, better documentation [`95e1b13`](https://github.com/genesys/modkit-loader/commit/95e1b131e9c2ea0ac2a42fb92c904a38e1b5feae)
+- replace modkit validator by parseManifest function, add esm example [`ccfeafa`](https://github.com/genesys/modkit-loader/commit/ccfeafa4103f6a66c83dec06bdb29d2cc16fd19d)
+- Add sample for System [`d3e6fdc`](https://github.com/genesys/modkit-loader/commit/d3e6fdc36a8732022217001eea229d49665e0feb)
+- add umd example [`9f6ab3f`](https://github.com/genesys/modkit-loader/commit/9f6ab3f72aa8910bd5ac6ef46a926233dc1c4a4f)
+- add github actions pipeline [`89c60b2`](https://github.com/genesys/modkit-loader/commit/89c60b26aaea4d6ef2738a2de7a44d675cd790e7)
+- remove stencil pixel components, add iife example markdown [`db97fd5`](https://github.com/genesys/modkit-loader/commit/db97fd5be064491136dfd116af4179974bb05ec7)
+- better documentation, jsdoc fixes [`52b3353`](https://github.com/genesys/modkit-loader/commit/52b3353f48c1c37212fcda36ee997e0e98f81746)
+- Add doc for AMD and system examples [`94e10f3`](https://github.com/genesys/modkit-loader/commit/94e10f358ce4f64eaaf718ad6c773d29c7d6aa0e)
+- minor fixes [`5bdfb86`](https://github.com/genesys/modkit-loader/commit/5bdfb86272bd2228f2ebdd68bb2091de8c4935ee)
+- add install:all script [`a4fd4c7`](https://github.com/genesys/modkit-loader/commit/a4fd4c7814640bf1f30923784a5cfe3ea32680cf)
+- remove npm check for initial release [`4ba9213`](https://github.com/genesys/modkit-loader/commit/4ba9213f3d9dab83d0e4b447d61660ef945cffa0)
+- fix ci, bump initial version [`cfb659e`](https://github.com/genesys/modkit-loader/commit/cfb659eb3d95fae3faef1b6d0db374a10b157bea)
+- update cpx scripts, remove install amd [`00c6e91`](https://github.com/genesys/modkit-loader/commit/00c6e918d566c719268f58c4f40c8a384735a345)
+- fix css issues in system sample [`09ec3fe`](https://github.com/genesys/modkit-loader/commit/09ec3fe8f7d04b6ddc0554a05840104f449985e6)
+- Release modkit-loader@0.0.1 [`4e57c6f`](https://github.com/genesys/modkit-loader/commit/4e57c6f50dbf5e7bc0113d41dcc9a3a199df6c2e)
+- update package.json [`1b67fcd`](https://github.com/genesys/modkit-loader/commit/1b67fcdc87e2264e2ad4ccb3a4be911c4316b25d)
+- bump version 0.0.1 [`4a5856c`](https://github.com/genesys/modkit-loader/commit/4a5856ca6d6f73f2dcbb3c2850524a8ffc99b19a)
+- Fix string message [`cf8efcf`](https://github.com/genesys/modkit-loader/commit/cf8efcfdd9d26160e2f3d499b6bbf62395aa1276)
+- Add amd example [`d708d3e`](https://github.com/genesys/modkit-loader/commit/d708d3e4f0a23bc2a503d848eb0a5e0505794ad0)
+- remove from install all [`55f8148`](https://github.com/genesys/modkit-loader/commit/55f8148a1b93b9ec5351175994c5f5b938d2dec3)
+- remove iife install [`6e0e72a`](https://github.com/genesys/modkit-loader/commit/6e0e72a289949ede7797a6b34f670083a4222400)
+- add todo link [`db2903d`](https://github.com/genesys/modkit-loader/commit/db2903d50fecacb8f3e3821186aac1a72c687303)
+- Initial commit [`c12bce6`](https://github.com/genesys/modkit-loader/commit/c12bce6aee2e7be023a9ebb912d52535ae6da52e)
