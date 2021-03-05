@@ -34,7 +34,7 @@ jobs:
           ${{ runner.os }}-build-
           ${{ runner.os }}-
     - name: Install
-      run: npm install && cd docs && npm install
+      run: npm run install:all
     - name: Lint
       run: npm run lint
     - name: Build
@@ -73,7 +73,8 @@ jobs:
         publish_dir: ./docs/dist
     - name: Release
       if: github.event_name == 'push' && steps.env.outputs.SHOULD_RELEASE == 'true'
-      run: npx release-it --ci --verbose --disable-metrics --increment=${{steps.env.outputs.VERSION}}
+      # run: npx release-it --ci --verbose --disable-metrics --increment=${{steps.env.outputs.VERSION}}
+      run: npx release-it --ci --verbose --disable-metrics --increment=0.0.1
       env:
         GIT_AUTHOR_NAME: Github Action
         GIT_AUTHOR_EMAIL: action@github.com
