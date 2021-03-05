@@ -72,7 +72,7 @@ jobs:
         personal_token: ${{ secrets.ACCESS_TOKEN }}
         publish_dir: ./docs/dist
     - name: Release
-      if: github.event_name == 'push' && steps.env.outputs.SHOULD_RELEASE == 'true'
+      # if: github.event_name == 'push' && steps.env.outputs.SHOULD_RELEASE == 'true'
       # run: npx release-it --ci --verbose --disable-metrics --increment=${{steps.env.outputs.VERSION}}
       run: npx release-it --ci --verbose --disable-metrics --increment=0.0.1
       env:
