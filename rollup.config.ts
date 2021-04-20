@@ -27,8 +27,7 @@ export default {
   plugins: [
     json(),
     typescript({
-      useTsconfigDeclarationDir: true,
-      objectHashIgnoreUnknownHack: true
+      useTsconfigDeclarationDir: true
     }),
     string({
       include: 'src/templates/**'
