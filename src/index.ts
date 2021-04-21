@@ -1,18 +1,24 @@
 import { ModkitOptions, ModkitPackage } from './types/modkit';
-import { loadPackage as load, getPackage as getModule } from './helpers/package';
+import { loadPackage, getPackage } from './helpers/package';
 
 /**
  * The list of modules currently loaded in the application.
  */
-const modules: ModkitPackage[] = [];
+export const modules: ModkitPackage[] = [];
 /**
  * Properties that customizes the Modkit behavior.
  */
-const options: ModkitOptions = {};
+export const options: ModkitOptions = {};
 
-export {
-  modules,
-  options,
-  load,
-  getModule
-};
+/**
+ * Loads package by manifest(s), or url(s).
+ * @param from The package location. [url(s), or manifest(s)]
+ * @param parseManifest Custom parseManifest method.
+ */
+export const load = loadPackage;
+
+/**
+ * Get package by name.
+ * @param name Package name.
+ */
+export const getModule = getPackage;

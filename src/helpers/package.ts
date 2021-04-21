@@ -3,11 +3,6 @@ import { ModkitManifest, ModkitManifestParser, ModkitManager, ModkitPackage } fr
 import { isObject } from '../utils/object';
 import { loadByManifest, loadByUrl } from './manifest';
 
-/**
- * Loads package by manifest(s), or url(s).
- * @param from The package location. [url(s), or manifest(s)]
- * @param parseManifest Custom parseManifest method.
- */
 export async function loadPackage
   (
     this: ModkitManager,
@@ -36,10 +31,6 @@ export async function loadPackage
   }
 }
 
-/**
- * Get package by name.
- * @param name Package name.
- */
 export function getPackage (this: ModkitManager, name: string): ModkitPackage|null {
   let _mod = null;
   for (const mod of this.modules) {
