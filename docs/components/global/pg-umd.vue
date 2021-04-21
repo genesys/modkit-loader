@@ -76,6 +76,11 @@ export default {
         this.mod = null;
       }
     }
+  },
+  mounted () {
+    delete window.define;
+    delete window.require;
+    delete window.requirejs;
   }
 };
 </script>
