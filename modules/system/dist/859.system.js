@@ -1,0 +1,1 @@
+(self.webpackChunksystem=self.webpackChunksystem||[]).push([[859],{859:(e,s,t)=>{"use strict";t.r(s),t.d(s,{default:()=>u});const u=function(){return"You left"}}}]);
