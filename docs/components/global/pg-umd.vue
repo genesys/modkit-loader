@@ -18,12 +18,6 @@
 import Vue from 'vue';
 export default {
   name: 'pg-umd',
-  props: {
-    name: {
-      type: String,
-      default: null
-    }
-  },
   data () {
     return {
       dayjs: false,

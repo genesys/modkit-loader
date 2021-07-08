@@ -2,6 +2,8 @@
 title: Modkit Loader - Playground - System
 sidebar:
   links:
+    - title: None
+      path: /playground/none
     - title: Iife
       path: /playground/iife
     - title: Amd

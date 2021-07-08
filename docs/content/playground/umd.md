@@ -2,6 +2,8 @@
 title: Modkit Loader - Playground - Umd
 sidebar:
   links:
+    - title: None
+      path: /playground/none
     - title: Iife
       path: /playground/iife
     - title: Amd

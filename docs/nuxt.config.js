@@ -38,7 +38,8 @@ export default {
   },
 
   plugins: [
-    '~/plugins/modkit-loader.js'
+    '~/plugins/modkit-loader.js',
+    { src: '~/plugins/json.js', mode: 'client' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

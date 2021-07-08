@@ -33,6 +33,9 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
       await _validateManifest(manifest, parseManifest);
       let _mod = null;
       switch (manifest.format.type) {
+        case ModkitModuleFormatType.None:
+          _mod = null;
+          break;
         case ModkitModuleFormatType.Amd:
           _mod = await loadAmd(manifest);
           break;
@@ -54,7 +57,7 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
       console.info(`[Modkit] ${manifest.name} successfully loaded.`);
       this.modules.push({
         ...manifest,
-        rootPath: resolveUrl(manifest.endpoint, './').slice(0, -1),
+        rootPath: resolveUrl(manifest.endpoint || '', './').slice(0, -1),
         mod: _mod
       });
       return this.modules[this.modules.length - 1];
@@ -74,10 +77,9 @@ export async function loadByUrl (this: ModkitManager, manifestPath: string, pars
   const _loadByManifest = loadByManifest.bind(this);
   const res = await axios.get(manifestPath);
   if (instanceOfManifest(res.data)) {
-    const endpoint = resolveUrl(manifestPath, res.data.endpoint);
     const manifest = {
       ...res.data,
-      endpoint
+      endpoint: resolveUrl(manifestPath, res.data.endpoint || '')
     };
     return _loadByManifest(manifest, parseManifest);
   } else {

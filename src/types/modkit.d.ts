@@ -84,6 +84,22 @@ declare interface ModkitOptions {
 }
 
 /**
+ * None module manifest.
+ */
+ declare interface ModkitNone {
+  /**
+   * Module name.
+   */
+  name: string;
+  /**
+   * Module format.
+   */
+  format?: {
+    type: ModkitModuleFormatType.None;
+  };
+}
+
+/**
  * Iife module manifest.
  */
 declare interface ModkitIife {
@@ -99,6 +115,7 @@ declare interface ModkitIife {
    * Module format.
    */
   format?: {
+    type: ModkitModuleFormatType.Iife;
     /**
      * Global module name to access (window.<name>)
      */

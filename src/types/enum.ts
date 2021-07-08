@@ -10,6 +10,7 @@ export enum ModkitDependencyType {
  * Module format.
  */
 export enum ModkitModuleFormatType {
+  None = 'none',
   Amd = 'amd',
   Esm = 'esm',
   Iife = 'iife',

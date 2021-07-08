@@ -1,23 +1,25 @@
 <template>
-  <div class="pg-esm">
+  <div class="pg-none">
     <div class="row">
       <label>Actions:</label>
-      <button v-if="!mod" @click="load">Load</button>
+      <button v-if="!manifest" @click="load">Load</button>
       <button v-else @click="unload">Unload</button>
     </div>
     <div class="content">
-      <div id="esm-sample"></div>
+      <div v-show="manifest" id="manifest-container"></div>
+      <div v-show="!manifest">
+        Module not loaded.
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
 export default {
-  name: 'pg-esm',
+  name: 'pg-none',
   data () {
     return {
-      mod: null
+      manifest: null
     };
   },
   computed: {
@@ -27,30 +29,25 @@ export default {
   },
   methods: {
     load () {
-      this.$modkit.load(`${this.publicPath}/modules/esm/manifest.json`, (manifest) => {
-        // Rewrite dependency endpoint
-        manifest.dependencies[0].endpoint = `${this.publicPath}/modules/umd/manifest.cdn.json`;
-      })
-        .then(({ mod }) => {
-          this.mod = mod;
-          this.mod.load({ Vue, umdView: this.$modkit.getModule('umd').mod.UmdView });
+      this.$modkit.load(`${this.publicPath}/modules/none/manifest.json`)
+        .then((manifest) => {
+          this.manifest = manifest;
+          document.getElementById('manifest-container').appendChild(this.$json.format(this.manifest).render());
         })
         .catch((err) => {
           console.error(err);
         });
     },
     unload () {
-      if (this.mod) {
-        this.mod.unload();
-        this.mod = null;
-      }
+      this.manifest = null;
+      document.getElementById('manifest-container').innerHTML = '';
     }
   }
 };
 </script>
 
 <style lang="scss">
-div.pg-esm {
+div.pg-none {
   margin-top: 2em;
   margin-bottom: 1em;
   > div.row {

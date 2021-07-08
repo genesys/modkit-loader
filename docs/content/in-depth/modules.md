@@ -28,7 +28,7 @@ declare interface ModkitManifest {
    */
   format: {
     /**
-     * Module output type (amd, esm, iife, system or umd).
+     * Module output type (none, amd, esm, iife, system or umd).
      */
     type: ModkitModuleFormatType;
     /**
@@ -48,6 +48,10 @@ declare interface ModkitManifest {
 Modkit supports five module formats.
 
 Moreover, Modkit is smart, and will load dynamically what he needs to load a module.
+
+### None
+
+When using this format, `Modkit` will only load the `manifest.json` file.
 
 ### Amd
 

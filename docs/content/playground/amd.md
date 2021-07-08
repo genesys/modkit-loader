@@ -2,6 +2,8 @@
 title: Modkit Loader - Playground - Amd
 sidebar:
   links:
+    - title: None
+      path: /playground/none
     - title: Iife
       path: /playground/iife
     - title: Amd
@@ -16,6 +18,7 @@ sidebar:
 <pg-main name="amd"></pg-main>
 
 # AMD
+
 > Use the toolbar `load/unload` button to **load/unload** the module.
 
 This really simple example will just create an alert when being **loaded/unloaded**.

@@ -9,7 +9,7 @@
     "babel-loader": "8.2.2",
     "copy-webpack-plugin": "8.1.1",
     "css-loader": "5.2.4",
-    "node-sass": "5.0.0",
+    "sass": "1.32.8",
     "sass-loader": "10.1.1",
     "vue-loader": "15.9.6",
     "vue-template-compiler": "2.6.12",

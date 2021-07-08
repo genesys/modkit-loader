@@ -10,11 +10,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxt/content": "1.9.0",
+    "@nuxt/content": "1.14.0",
     "@nuxt/typescript-runtime": "2.0.0",
     "@nuxtjs/pwa": "3.0.2",
     "core-js": "3.6.5",
-    "nuxt": "2.14.6"
+    "json-formatter-js": "2.3.4",
+    "nuxt": "2.15.7"
   },
   "devDependencies": {
     "@nuxt/types": "2.14.6",
@@ -30,8 +31,8 @@
     "eslint": "7.10.0",
     "eslint-plugin-nuxt": "1.0.0",
     "jest": "26.5.0",
-    "node-sass": "4.14.1",
     "prism-themes": "1.4.1",
+    "sass": "1.32.8",
     "sass-loader": "10.0.3",
     "ts-jest": "26.4.1",
     "vue-jest": "3.0.4"

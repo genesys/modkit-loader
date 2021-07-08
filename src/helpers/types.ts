@@ -7,7 +7,6 @@ import { ModkitManifest, ModkitDependency } from '../types/modkit';
 export function instanceOfManifest (manifest: ModkitManifest): manifest is ModkitManifest {
   return (
     'name' in manifest &&
-    'endpoint' in manifest &&
     'format' in manifest &&
     'type' in manifest.format &&
     'version' in manifest
