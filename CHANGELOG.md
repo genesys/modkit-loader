@@ -1,7 +1,21 @@
 # Changelog
 
-## [0.0.2](https://github.com/genesys/modkit-loader/compare/0.0.1...0.0.2)
+## [0.0.3](https://github.com/genesys/modkit-loader/compare/0.0.2...0.0.3)
 
+- add none format, update dependencies [`d749818`](https://github.com/genesys/modkit-loader/commit/d7498189f7ac9bf848b7febe71463b1c5744cdd0)
+- update package dependencies, migrate to webpack samples [`9cfd950`](https://github.com/genesys/modkit-loader/commit/9cfd950d35534cfc75d589b4dd2c52a26a6b060c)
+- update various dependencies [`5a39619`](https://github.com/genesys/modkit-loader/commit/5a39619b2dcbce66c650f8451e2991219d584178)
+- fix unit-tests on unix envs [`ec5eea0`](https://github.com/genesys/modkit-loader/commit/ec5eea0420919496673791bf30aac743a8f25518)
+- bump version 0.0.3 [`75f28df`](https://github.com/genesys/modkit-loader/commit/75f28df16c6d5812aae3040b0295e35de0fd6681)
+- update pipeline node to 14 [`49ed275`](https://github.com/genesys/modkit-loader/commit/49ed275971954f8d3e4f8fff977b35681b82cdfd)
+- try with older release-it version [`cce28a6`](https://github.com/genesys/modkit-loader/commit/cce28a6061f7b923f0cb2b8f8a27c184d4690ce4)
+- update lock file [`baa4134`](https://github.com/genesys/modkit-loader/commit/baa4134455b925393a4d63983004986b7a33dee5)
+- migrate to node 14 on pipeline [`bdab73c`](https://github.com/genesys/modkit-loader/commit/bdab73ce1c3d6ba8238df6e3948e9c1fdd94c23e)
+- remove sonar from ci [`6edcd28`](https://github.com/genesys/modkit-loader/commit/6edcd2870b17a5f1e037c95e9ebf4a1a885d3ef8)
+
+## [0.0.2](https://github.com/genesys/modkit-loader/compare/0.0.1...0.0.2) (2021-03-05)
+
+- Release modkit-loader@0.0.2 [`b34a131`](https://github.com/genesys/modkit-loader/commit/b34a131a7ef80aecf41280c9dbc1e349394dbf88)
 - bump version 0.0.2 [`2594d8b`](https://github.com/genesys/modkit-loader/commit/2594d8b272924442f5c87b55ab4a03ecf0fd5024)
 
 ## 0.0.1 (2021-03-05)
