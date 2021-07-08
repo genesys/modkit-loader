@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:".\u002F_nuxt\u002Fstatic\u002F1625739522",layout:"default",error:a,serverRendered:true,routePath:"\u002Fplayground\u002Famd",config:{_app:{basePath:"\u002Fmodkit-loader\u002F",assetsPath:".\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"f673ebbe"}}}}(null));
