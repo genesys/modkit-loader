@@ -56,6 +56,17 @@ describe('Modkit Manifest Helper', () => {
     it('should not load unsupported package', async () => {
       await expect(_loadByManifest(manifest)).rejects.toThrow('The format is not supported by Modkit, use one of these: amd, esm, iife, umd, system.');
     });
+    it('should load none package', async () => {
+      const data = await _loadByManifest({
+        ...manifest,
+        name: 'dummy-none',
+        format: {
+          type: ModkitModuleFormatType.None
+        },
+        endpoint: undefined
+      } as any);
+      expect(data.mod).toBeUndefined();
+    });
     it('should load amd package', async () => {
       manifest.name = 'dummy-amd';
       manifest.format.type = ModkitModuleFormatType.Amd;
@@ -99,6 +110,18 @@ describe('Modkit Manifest Helper', () => {
     it('should load by url and reject bad manifest', async () => {
       mockAxios.get.mockResolvedValueOnce({ data: badManifest });
       await expect(_loadByUrl('')).rejects.toThrow('The manifest seems to have a bad syntax.');
+    });
+    it('should load by url without endpoint', async () => {
+      mockAxios.get.mockResolvedValueOnce({ data: {
+        ...manifest,
+        endpoint: undefined
+      } });
+      const pkg = await _loadByUrl('');
+      expect(pkg).toEqual({
+        ...manifest,
+        mod: undefined,
+        rootPath: ''
+      });
     });
     it('should load by url', async () => {
       mockAxios.get.mockResolvedValueOnce({ data: manifest });

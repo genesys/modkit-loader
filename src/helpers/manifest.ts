@@ -31,10 +31,10 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
     } else {
       console.info(`[Modkit] ${manifest.name} manifest: ${JSON.stringify(manifest, null, JSON_SPACES)}`);
       await _validateManifest(manifest, parseManifest);
-      let _mod = null;
+      let _mod = undefined;
       switch (manifest.format.type) {
         case ModkitModuleFormatType.None:
-          _mod = null;
+          _mod = undefined;
           break;
         case ModkitModuleFormatType.Amd:
           _mod = await loadAmd(manifest);
