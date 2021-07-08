@@ -1,0 +1,10 @@
+{
+  "name": "none",
+  "format": {
+    "type": "none"
+  },
+  "version": "0.0.1",
+  "data": {
+    "message": "Hello World!"
+  }
+}

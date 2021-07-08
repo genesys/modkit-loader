@@ -5,6 +5,5 @@
     "type": "iife",
     "name": "IIFE"
   },
-  "version": "0.0.1",
-  "dependencies": []
+  "version": "0.0.1"
 }
