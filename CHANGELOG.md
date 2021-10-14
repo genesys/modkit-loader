@@ -1,12 +1,17 @@
 # Changelog
 
-## [0.0.3](https://github.com/genesys/modkit-loader/compare/0.0.2...0.0.3)
+## [0.0.4](https://github.com/genesys/modkit-loader/compare/0.0.3...0.0.4)
+
+- update dependencies, bump version 0.0.4 [`7bdd496`](https://github.com/genesys/modkit-loader/commit/7bdd49685301541627bb00e6393fa7ff3658706e)
+
+## [0.0.3](https://github.com/genesys/modkit-loader/compare/0.0.2...0.0.3) (2021-07-08)
 
 - add none format, update dependencies [`d749818`](https://github.com/genesys/modkit-loader/commit/d7498189f7ac9bf848b7febe71463b1c5744cdd0)
 - update package dependencies, migrate to webpack samples [`9cfd950`](https://github.com/genesys/modkit-loader/commit/9cfd950d35534cfc75d589b4dd2c52a26a6b060c)
 - update various dependencies [`5a39619`](https://github.com/genesys/modkit-loader/commit/5a39619b2dcbce66c650f8451e2991219d584178)
 - fix unit-tests on unix envs [`ec5eea0`](https://github.com/genesys/modkit-loader/commit/ec5eea0420919496673791bf30aac743a8f25518)
 - bump version 0.0.3 [`75f28df`](https://github.com/genesys/modkit-loader/commit/75f28df16c6d5812aae3040b0295e35de0fd6681)
+- Release modkit-loader@0.0.3 [`167440d`](https://github.com/genesys/modkit-loader/commit/167440d54115aaed375c3c3e482d4877f6e5273e)
 - update pipeline node to 14 [`49ed275`](https://github.com/genesys/modkit-loader/commit/49ed275971954f8d3e4f8fff977b35681b82cdfd)
 - try with older release-it version [`cce28a6`](https://github.com/genesys/modkit-loader/commit/cce28a6061f7b923f0cb2b8f8a27c184d4690ce4)
 - update lock file [`baa4134`](https://github.com/genesys/modkit-loader/commit/baa4134455b925393a4d63983004986b7a33dee5)
