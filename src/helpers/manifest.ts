@@ -75,7 +75,7 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
 export async function loadByUrl (this: ModkitManager, manifestPath: string, parseManifest?: ModkitManifestParser): Promise<ModkitPackage> {
   // Bindings
   const _loadByManifest = loadByManifest.bind(this);
-  const res = await axios.get(manifestPath);
+  const res: any = await axios.get(manifestPath);
   if (instanceOfManifest(res.data)) {
     const manifest = {
       ...res.data,
