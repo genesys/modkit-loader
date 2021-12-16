@@ -28,6 +28,7 @@ module.exports = {
     }],
     'no-tabs': 'off',
     'vue/html-indent': 'off',
-    'vue/name-property-casing': 'off'
+    'vue/name-property-casing': 'off',
+    'vue/multi-word-component-names': 'off'
   }
 };
