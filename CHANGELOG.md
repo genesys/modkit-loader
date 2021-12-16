@@ -1,8 +1,14 @@
 # Changelog
 
-## [0.0.4](https://github.com/genesys/modkit-loader/compare/0.0.3...0.0.4)
+## [0.0.5](https://github.com/genesys/modkit-loader/compare/0.0.4...0.0.5)
+
+- fix uts, update docs dependencies [`032739a`](https://github.com/genesys/modkit-loader/commit/032739a85e4e66f52f95958ab79d564fbd2f3810)
+- update dependencies, add cors option, bump v0.0.5 [`8cc41b2`](https://github.com/genesys/modkit-loader/commit/8cc41b20e7e8712a9d6c458cf3277cd343762aa8)
+
+## [0.0.4](https://github.com/genesys/modkit-loader/compare/0.0.3...0.0.4) (2021-10-14)
 
 - update dependencies, bump version 0.0.4 [`7bdd496`](https://github.com/genesys/modkit-loader/commit/7bdd49685301541627bb00e6393fa7ff3658706e)
+- Release modkit-loader@0.0.4 [`3e32184`](https://github.com/genesys/modkit-loader/commit/3e3218421ccffa2ca239a31fda0f605eac5fbb73)
 
 ## [0.0.3](https://github.com/genesys/modkit-loader/compare/0.0.2...0.0.3) (2021-07-08)
 
