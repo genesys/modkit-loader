@@ -8,7 +8,9 @@ import { instanceOfManifest } from '../helpers/types';
  * Loads a library dependency.
  * @param dependency Dependency manifest.
  */
-export async function loadLibDependency (dependency: ModkitDependency): Promise<void> {
+export async function loadLibDependency (this: ModkitManager, dependency: ModkitDependency): Promise<void> {
+  // Bindings
+  const _loadDependency = loadDependency.bind(this);
   let depFullName = dependency.name;
   if (dependency.version) {
     depFullName += `@${dependency.version}`;
@@ -21,7 +23,7 @@ export async function loadLibDependency (dependency: ModkitDependency): Promise<
     }
   } catch (err) {
     if (dependency.endpoint) {
-      await loadDependency(dependency as ModkitIife);
+      await _loadDependency(dependency as ModkitIife);
     }
     try {
       ref = deepFind(window, dependency.ref || dependency.name) as ModkitIife;

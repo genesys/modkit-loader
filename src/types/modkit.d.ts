@@ -81,6 +81,10 @@ declare interface ModkitOptions {
    * Global parseManifest, that will be called for each module loading.
    */
   parseManifest?: ModkitManifestParser;
+  /**
+   * Whether the browser should send cookies when loading modules or not.
+   */
+  withCredentials: boolean;
 }
 
 /**

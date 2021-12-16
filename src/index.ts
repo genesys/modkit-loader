@@ -8,7 +8,9 @@ export const modules: ModkitPackage[] = [];
 /**
  * Properties that customizes the Modkit behavior.
  */
-export const options: ModkitOptions = {};
+export const options: ModkitOptions = {
+  withCredentials: false
+};
 
 /**
  * Loads package by manifest(s), or url(s).

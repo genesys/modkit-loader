@@ -23,6 +23,8 @@ const JSON_SPACES = 2;
 export async function loadByManifest (this: ModkitManager, manifest: ModkitManifest, parseManifest?: ModkitManifestParser): Promise<ModkitPackage> {
   // Bindings
   const _validateManifest = validateManifest.bind(this);
+  const _loadIife = loadIife.bind(this);
+  const _loadUmd = loadUmd.bind(this);
   if (instanceOfManifest(manifest)) {
     const _module = this.getModule(manifest.name);
     if (_module) {
@@ -43,13 +45,13 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
           _mod = await loadEsm(manifest);
           break;
         case ModkitModuleFormatType.Iife:
-          _mod = await loadIife(manifest as ModkitIife);
+          _mod = await _loadIife(manifest as ModkitIife);
           break;
         case ModkitModuleFormatType.System:
           _mod = await loadSystem(manifest);
           break;
           case ModkitModuleFormatType.Umd:
-          _mod = await loadUmd(manifest);
+          _mod = await _loadUmd(manifest);
           break;
         default:
           throw new Error('The format is not supported by Modkit, use one of these: amd, esm, iife, umd, system.');
@@ -75,7 +77,7 @@ export async function loadByManifest (this: ModkitManager, manifest: ModkitManif
 export async function loadByUrl (this: ModkitManager, manifestPath: string, parseManifest?: ModkitManifestParser): Promise<ModkitPackage> {
   // Bindings
   const _loadByManifest = loadByManifest.bind(this);
-  const res: any = await axios.get(manifestPath);
+  const res: any = await axios.get(manifestPath, { withCredentials: this.options.withCredentials });
   if (instanceOfManifest(res.data)) {
     const manifest = {
       ...res.data,
