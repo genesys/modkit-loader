@@ -1,9 +1,14 @@
 # Changelog
 
-## [0.0.5](https://github.com/genesys/modkit-loader/compare/0.0.4...0.0.5)
+## [0.0.6](https://github.com/genesys/modkit-loader/compare/0.0.5...0.0.6)
+
+- Update semver dependency and bump v0.0.6 [`fe1c4e4`](https://github.com/genesys/modkit-loader/commit/fe1c4e4f66df653bfc8b0a0cfacd76418c3b4242)
+
+## [0.0.5](https://github.com/genesys/modkit-loader/compare/0.0.4...0.0.5) (2021-12-16)
 
 - fix uts, update docs dependencies [`032739a`](https://github.com/genesys/modkit-loader/commit/032739a85e4e66f52f95958ab79d564fbd2f3810)
 - update dependencies, add cors option, bump v0.0.5 [`8cc41b2`](https://github.com/genesys/modkit-loader/commit/8cc41b20e7e8712a9d6c458cf3277cd343762aa8)
+- Release modkit-loader@0.0.5 [`7560774`](https://github.com/genesys/modkit-loader/commit/7560774e15760e7681cfb814b68ec918f3d901f2)
 
 ## [0.0.4](https://github.com/genesys/modkit-loader/compare/0.0.3...0.0.4) (2021-10-14)
 
