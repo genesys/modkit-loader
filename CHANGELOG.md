@@ -1,8 +1,13 @@
 # Changelog
 
-## [0.0.6](https://github.com/genesys/modkit-loader/compare/0.0.5...0.0.6)
+## [0.0.7](https://github.com/genesys/modkit-loader/compare/0.0.6...0.0.7)
+
+- Update semver dependency and bump v0.0.7 [`fb062d7`](https://github.com/genesys/modkit-loader/commit/fb062d7f87d17f8727b2a384d3ca67d6e7d1d898)
+
+## [0.0.6](https://github.com/genesys/modkit-loader/compare/0.0.5...0.0.6) (2023-08-16)
 
 - Update semver dependency and bump v0.0.6 [`fe1c4e4`](https://github.com/genesys/modkit-loader/commit/fe1c4e4f66df653bfc8b0a0cfacd76418c3b4242)
+- Release modkit-loader@0.0.6 [`315a45d`](https://github.com/genesys/modkit-loader/commit/315a45d9bbb61e3b1b5077aabc88e2d99b6e437a)
 
 ## [0.0.5](https://github.com/genesys/modkit-loader/compare/0.0.4...0.0.5) (2021-12-16)
 
