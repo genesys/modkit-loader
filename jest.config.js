@@ -17,8 +17,11 @@ module.exports = {
     "src/**/*.ts",
     "!src/**/*.d.ts"
   ],
+  transformIgnorePatterns: ['/node_modules/'],
   moduleNameMapper: {
-    "^.+\\.tpl$": "<rootDir>/test/mocks/template.ts"
+    "^.+\\.tpl$": "<rootDir>/test/mocks/template.ts",
+    '^axios$': require.resolve('axios')
+    //"axios": "axios/dist/node/axios.cjs"
   },
   setupFiles: [
     "<rootDir>/test/mocks/setup.ts"

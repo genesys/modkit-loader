@@ -1,6 +1,6 @@
 {
   "name": "modkit-loader",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Runtime Module Loader",
   "main": "dist/commonjs/index.js",
   "typings": "dist/types/index.d.ts",
@@ -99,7 +99,7 @@
     "typescript": "3.9.4"
   },
   "dependencies": {
-    "axios": "0.23.0",
+    "axios": "1.6.2",
     "bluebird": "3.5.5",
     "es6-template-strings": "2.0.1",
     "resolve-url": "0.2.1",
