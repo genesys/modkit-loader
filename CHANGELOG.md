@@ -1,7 +1,13 @@
 # Changelog
 
-## [0.0.7](https://github.com/genesys/modkit-loader/compare/0.0.6...0.0.7)
+## [0.0.8](https://github.com/genesys/modkit-loader/compare/0.0.7...0.0.8)
 
+- Update Axios dependency and bump version 0.0.8 [`25605c7`](https://github.com/genesys/modkit-loader/commit/25605c7c94096c939521579df9326aab9170c090)
+- Adjust typescript version [`82eb7af`](https://github.com/genesys/modkit-loader/commit/82eb7afca893bf996140df5b0da218212b51d9ee)
+
+## [0.0.7](https://github.com/genesys/modkit-loader/compare/0.0.6...0.0.7) (2023-09-27)
+
+- Release modkit-loader@0.0.7 [`3efacc0`](https://github.com/genesys/modkit-loader/commit/3efacc0343321c0f212d400c05eacb64af0305c5)
 - Update semver dependency and bump v0.0.7 [`fb062d7`](https://github.com/genesys/modkit-loader/commit/fb062d7f87d17f8727b2a384d3ca67d6e7d1d898)
 
 ## [0.0.6](https://github.com/genesys/modkit-loader/compare/0.0.5...0.0.6) (2023-08-16)
