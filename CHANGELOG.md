@@ -1,9 +1,14 @@
 # Changelog
 
-## [0.0.8](https://github.com/genesys/modkit-loader/compare/0.0.7...0.0.8)
+## [0.0.9](https://github.com/genesys/modkit-loader/compare/0.0.8...0.0.9)
+
+- Update axios and Rollup dependencies and bump version 0.0.9 [`141f0dd`](https://github.com/genesys/modkit-loader/commit/141f0dd36dc7067b6f4a5f6acc2bd896969049a7)
+
+## [0.0.8](https://github.com/genesys/modkit-loader/compare/0.0.7...0.0.8) (2023-11-28)
 
 - Update Axios dependency and bump version 0.0.8 [`25605c7`](https://github.com/genesys/modkit-loader/commit/25605c7c94096c939521579df9326aab9170c090)
 - Adjust typescript version [`82eb7af`](https://github.com/genesys/modkit-loader/commit/82eb7afca893bf996140df5b0da218212b51d9ee)
+- Release modkit-loader@0.0.8 [`53e2e4c`](https://github.com/genesys/modkit-loader/commit/53e2e4cb9e363c29e7270541d42ce0bf53022e38)
 
 ## [0.0.7](https://github.com/genesys/modkit-loader/compare/0.0.6...0.0.7) (2023-09-27)
 
